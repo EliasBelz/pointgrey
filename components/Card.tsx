@@ -1,22 +1,33 @@
 import React from 'react';
 import { PostMetadata } from '@/utils/getMetaData';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const NewComponent: React.FC = (prop) => {
-  const { title, bio, stream, release, poster, slug } = prop as PostMetadata;
+const Card: React.FC<PostMetadata> = ({ title, bio, stream, release, poster, slug }) => {
   return (
-    <Link href={`/productions/${slug}`}>
-    <div className="max-w-sm rounded overflow-hidden shadow-lg p-4 bg-white hover:bg-gray-100 transition duration-300">
-      <img className="w-full" src={poster} alt={title} />
-      <div className="px-6 py-4">
-        <h3 className="font-bold text-xl mb-2">{title}</h3>
-        <p className="text-gray-700 text-base mb-2">{bio}</p>
-        <p className="text-gray-600 text-sm mb-2">{stream}</p>
-        <p className="text-gray-600 text-sm">{release.toDateString()}</p>
+    <Link
+      className='bg-orange-100 p-4 pb-5 rounded-sm shadow-2xl transform transition-transform duration-300 hover:scale-105 max-w-fit flex flex-col justify-between items-center'
+      href={`/productions/${slug}`}
+    >
+      <div className='text-lg font-semibold'>
+        <Image
+          src={poster}
+          alt={title}
+          height={450}
+          width={350}
+          className='shadow-lg mb-1 w-fit'
+        />
+        <div className='pl-1 pr-1 flex justify-between border-b-2 border-black'>
+          <p className='text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold'>
+            {title}
+          </p>
+          <p className='text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl'>
+            {`/${release.getFullYear()}`}
+          </p>
+        </div>
       </div>
-    </div>
-  </Link>
+    </Link>
   );
 };
 
-export default NewComponent;
+export default Card;

@@ -1,3 +1,4 @@
+"use server";
 import fs from "fs";
 import matter from "gray-matter";
 
@@ -12,7 +13,9 @@ export type PostMetadata = {
   slug: string;
 };
 
-export default function getPostMetadata(basePath: string): PostMetadata[] {
+export default async function getPostMetadata(
+  basePath: string
+): Promise<PostMetadata[]> {
   const folder = basePath + "/";
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
