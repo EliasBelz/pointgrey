@@ -1,27 +1,23 @@
-import React from 'react';
 import { PostMetadata } from '@/utils/getMetaData';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Card: React.FC<PostMetadata> = ({ title, bio, stream, release, poster, slug }) => {
   return (
-    <Link
-      className='bg-orange-100 p-4 pb-5 rounded-sm shadow-2xl transform transition-transform duration-300 hover:scale-105 max-w-fit flex flex-col justify-between items-center'
-      href={`/productions/${slug}`}
-    >
-      <div className='text-lg font-semibold'>
+    <Link href={`/productions/${slug}`}>
+      <div className="h-full bg-orange-200 p-3 lg:p-4 pb-3 lg:pb-5 rounded-sm shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl max-w-fit flex flex-col justify-between items-center text-xg font-semibold max-h-half">
         <Image
           src={poster}
           alt={title}
-          height={450}
-          width={350}
-          className='shadow-lg mb-1 w-fit'
+          height={375}
+          width={300}
+          className="shadow-lg mb-1 fit-content"
         />
-        <div className='pl-1 pr-1 flex justify-between border-b-2 border-black'>
-          <p className='text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold'>
+        <div className="px-1 w-full border-b-2 border-black flex justify-between items-end">
+          <p className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold flex-grow">
             {title}
           </p>
-          <p className='text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl'>
+          <p className="pl-2 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold text-end">
             {`/${release.getFullYear()}`}
           </p>
         </div>

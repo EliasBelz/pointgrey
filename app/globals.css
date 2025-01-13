@@ -4,17 +4,31 @@
 
 :root {
   --secondary: #49162b;
+  /* --background: #ce9a31; */
   --background: #c7987d;
   --foreground: #171717;
+  --accent: #e66d2b
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .secondary {
   color: var(--secondary);
   background-color: var(--secondary);
+}
+
+.no-scroll-bar {
+  -ms-overflow-style: none;
+}
+
+.no-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.max-h-half {
+  max-height: 49vh;
 }

@@ -17,22 +17,22 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
     : sortedProductions.filter((production) => production.type.toLowerCase() === filter);
 
   return (
-    <div className="pt-0 pb-0 pl-22 pr-2 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-44 lg:pl-36 max-w-full flex flex-col items-center overflow-hidden h-screen">
+    <div className="p-2 pt-0 pb-4 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
       <div className="flex justify-center mb-4">
         <button
-          className={`rounded-l-full w-14 h-10 border-black border-2 ${filter === 'film' ? 'bg-secondary text-orange-100' : 'bg-orange-100'}`}
+          className={`rounded-l-full w-14 h-10 border-black border-2 ${filter === 'film' ? 'bg-orange-200' : 'bg-orange-100'}`}
           onClick={() => setFilter('film')}
         >
           Film
         </button>
         <button
-          className={`w-14 h-10 border-black border-t-2 border-b-2 ${filter === 'all' ? 'bg-secondary text-orange-100' : 'bg-orange-100'}`}
+          className={`w-14 h-10 border-black border-t-2 border-b-2 ${filter === 'all' ? 'bg-orange-200' : 'bg-orange-100'}`}
           onClick={() => setFilter('all')}
         >
           All
         </button>
         <button
-          className={`rounded-r-full w-14 h-10 border-black border-2 ${filter === 'tv' ? 'bg-secondary text-orange-100' : 'bg-orange-100'}`}
+          className={`rounded-r-full w-14 h-10 border-black border-2 ${filter === 'tv' ? 'bg-orange-200' : 'bg-orange-100'}`}
           onClick={() => setFilter('tv')}
         >
           TV
