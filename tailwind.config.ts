@@ -14,6 +14,15 @@ export default {
         secondary: "var(--secondary)",
         accent: "var(--accent)",
       },
+      fontFamily: {
+        mar: "var(--font-markazi)",
+        out: "var(--font-outfit)",
+        pet: "var(--font-petrona)",
+        aleo: "var(--font-aleo)",
+      },
+      backgroundImage: {
+        "custom-radial": "radial-gradient(circle, #420B03 0%, #000000 100%)",
+      },
     },
   },
   plugins: [],

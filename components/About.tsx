@@ -2,19 +2,12 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="p-8 max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">About Point Grey Pictures</h1>
-      <p className="mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <div className="px-8 pt-12 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-1 w-full mx-auto text-center">About Point Grey Pictures</h1>
+      <hr className="border t-3 border-black mb-4 w-14 mx-auto"/>
+      <p className="mb-6 text-lg">
+      Founded by Seth Rogen and Evan Goldberg, Point Grey Pictures is a creative powerhouse dedicated to producing bold, original, and genre-defying content across film and television. With a signature blend of comedy, heart, and innovation, our projects push boundaries and entertain audiences worldwide. From cult-favorite comedies to thought-provoking dramas, Point Grey Pictures is committed to storytelling that is as fearless as it is unforgettable.
       </p>
-
-      <a href="mailto:info@pointgreypictures.com">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-          >
-          Contact Us
-        </button>
-      </a>
     </div>
   );
 };

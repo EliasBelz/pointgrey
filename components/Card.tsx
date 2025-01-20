@@ -14,7 +14,7 @@ const Card: React.FC<PostMetadata> = ({ title, bio, stream, release, poster, slu
           className="shadow-lg mb-1 fit-content"
         />
         <div className="px-1 w-full border-b-2 border-black flex justify-between items-end">
-          <p className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold flex-grow">
+          <p className="text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl font-bold flex-grow font-pet">
             {title}
           </p>
           <p className="pl-2 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold text-end">

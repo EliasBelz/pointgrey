@@ -8,7 +8,7 @@ export type PostMetadata = {
   bio: string;
   stream: string;
   release: Date;
-  logo: string;
+  logo?: string;
   poster: string;
   slug: string;
 };

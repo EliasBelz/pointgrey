@@ -1,7 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Card from './Card';
 import { PostMetadata } from '@/utils/getMetaData';
+import anime from 'animejs';
 
 type CardContainerProps = {
   list: PostMetadata[];
@@ -9,12 +10,27 @@ type CardContainerProps = {
 
 const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
   const [filter, setFilter] = useState<'all' | 'film' | 'tv'>('all');
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const sortedProductions = list.sort((a, b) => b.release.getTime() - a.release.getTime());
 
   const filteredProductions = filter === 'all'
     ? sortedProductions
     : sortedProductions.filter((production) => production.type.toLowerCase() === filter);
+
+  useEffect(() => {
+    cardRefs.current.forEach((card, i) => {
+
+      anime({
+        targets: card,
+        opacity: [0, 1],
+        translateY: [100, 0],
+        duration: 500,
+        easing: 'easeOutQuad',
+        delay: 210 + i * 100,
+      });
+    });
+  }, [filteredProductions]);
 
   return (
     <div className="p-2 pt-0 pb-4 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
@@ -39,8 +55,13 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
         </button>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-        {filteredProductions.map((production) => (
-          <Card key={production.slug} {...production} />
+        {filteredProductions.map((production, i) => (
+          <div
+            key={production.slug}
+            ref={(el) => (cardRefs.current[i] = el)}
+          >
+            <Card {...production} />
+          </div>
         ))}
       </div>
     </div>

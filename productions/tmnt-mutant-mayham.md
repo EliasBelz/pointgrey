@@ -3,7 +3,7 @@ title: "TMNT: Mutant Mayhem"
 type: "film"
 bio: "The Teenage Mutant Ninja Turtles must stop the Foot Clan from unleashing a powerful mutagen that could destroy New York City."
 release: "2023-08-11"
-logo: "/tmnt-mutant-mayhem-logo.png"
+logo: "/tmnt-mutant-mayham-logo.png"
 poster: "/tmnt-mutant-mayham-poster.jpg"
 ---
 
