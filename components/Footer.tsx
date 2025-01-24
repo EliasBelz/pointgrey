@@ -1,11 +1,21 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-secondary text-orange-200 py-4 h-32 w-full flex flex-col justify-center items-center">
-      <p className='p-2'>
+    <footer className="bg-secondary text-orange-200 py-10 w-full flex flex-col justify-between items-center">
+      <div className='w-full flex flex-col justify-start pl-10'>
+        <a
+          className='visited:text-orange-100'
+          href="https://houseplant.com">houseplant.com
+        </a>
+        <a
+          className='visited:text-orange-100'
+          href="https://reelstart.org">reelstart.org
+        </a>
+      </div>
+      <p className='pb-2'>
         © Point Grey Pictures 2024
       </p>
       <div className="w-full flex justify-center items-center space-x-6">

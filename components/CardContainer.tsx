@@ -11,6 +11,7 @@ type CardContainerProps = {
 const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
   const [filter, setFilter] = useState<'all' | 'film' | 'tv'>('all');
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const sortedProductions = list.sort((a, b) => b.release.getTime() - a.release.getTime());
 
@@ -19,21 +20,40 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
     : sortedProductions.filter((production) => production.type.toLowerCase() === filter);
 
   useEffect(() => {
-    cardRefs.current.forEach((card, i) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            cardRefs.current.forEach((card, i) => {
+              if (card) {
+                anime({
+                  targets: card,
+                  opacity: [0, 1],
+                  translateY: [100, 0],
+                  duration: 500,
+                  easing: 'easeOutQuad',
+                  delay: 210 + i * 100,
+                });
+              }
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-      anime({
-        targets: card,
-        opacity: [0, 1],
-        translateY: [100, 0],
-        duration: 500,
-        easing: 'easeOutQuad',
-        delay: 210 + i * 100,
-      });
-    });
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, [filteredProductions]);
 
   return (
-    <div className="p-2 pt-0 pb-4 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
+    <div ref={containerRef} className="p-2 pt-0 pb-4 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
       <div className="flex justify-center mb-4">
         <button
           className={`rounded-l-full w-14 h-10 border-black border-2 ${filter === 'film' ? 'bg-orange-200' : 'bg-orange-100'}`}

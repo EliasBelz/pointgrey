@@ -1,46 +1,74 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import anime from 'animejs';
+import { usePathname } from 'next/navigation';
+import SplashImage from './SplashImage';
 
-const SplashScreen: React.FC = () => {
+type SplashScreenProps = {
+  children: React.ReactNode;
+};
+
+const SplashScreen: React.FC<SplashScreenProps> =  ({ children }) => {
+
   const [visible, setVisible] = useState(true);
+  const path = usePathname().split("/");
+  const pathname = path[path.length - 1];
+  let prevPathname = pathname;
+
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if ("" === prevPathname) return;
+
+    setVisible(true);
+    prevPathname = pathname;
+
+  }, [pathname]);
+
+  useEffect(() => {
+    setTimeout(() => {
       setVisible(false);
-    }, 3000); // Hide splash screen after 3 seconds
+    }, 1700);
+    console.log("visible", visible);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const timeline = anime.timeline({
-      easing: 'easeOutQuad',
-      duration: 750,
-    });
-
-    timeline
-      .add({
-        targets: '.splash-screen h1',
-        opacity: [0, 1],
-        translateY: [-50, 0],
-      })
-      .add({
-        targets: '.splash-screen p',
-        opacity: [0, 1],
-        translateY: [50, 0],
-        offset: '-=500', // Starts 500ms before the previous animation ends
+    if (visible) {
+      const timeline = anime.timeline({
+        easing: 'easeOutQuad',
+        duration: 750,
       });
+      timeline
+        .add({
+          targets: '.splash-img',
+          opacity: [0, 1],
+        })
+        .add({
+          targets: '.splash-img',
+          scale: [1, 1.1],
+        })
+        .add({
+          targets: 'div.splish',
+          opacity: [1, 0],
+        });
+    } else {
+      anime({
+        targets: 'div.splish',
+        opacity: [0, 1],
+        duration: 1000,
+      });
+    }
+    // return () => clearTimeout(timer);
   }, [visible]);
 
-  if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-custom-radial z-50 splash-screen">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white">Welcome to Point Grey Pictures</h1>
-        <p className="text-lg text-white mt-4">Loading...</p>
-      </div>
+    <div key={pathname} className="flex flex-col flex-grow h-full">
+      {visible ? (
+        <div className="fixed inset-0 flex items-center justify-center bg-custom-radial z-50 splish">
+         <div className="splash-img">
+            <SplashImage slug={pathname}/>
+         </div>
+       </div>
+      ):
+      children}
     </div>
   );
 };
