@@ -5,9 +5,9 @@ bio: "A group of vigilantes set out to take down corrupt superheroes who abuse t
 release: "2019-07-26"
 logo: "/the-boys-logo.png"
 poster: "/the-boys-poster.jpg"
+featured: true
+trailer: "https://www.youtube.com/embed/EzFXDvC-EwM?si=HZsQrm6NOvXY9q6q"
 ---
-
-# The Boys
 
 ## Description
 The Boys is an American satirical superhero television series developed by Eric Kripke for Amazon Prime Video. Based on the comic book of the same name by Garth Ennis and Darick Robertson, it follows the eponymous team of vigilantes as they combat superpowered individuals (referred to as "Supes") who abuse their powers for personal gain and work for a powerful company (Vought International) that ensures the general public views them as heroes. The series features an ensemble cast that includes Karl Urban, Jack Quaid, Antony Starr, Erin Moriarty, Dominique McElligott, Jessie T. Usher, Chace Crawford, Laz Alonso, Tomer Capone, Karen Fukuhara, Nathan Mitchell, Elisabeth Shue, Colby Minifie, Aya Cash, Claudia Doumit, Jensen Ackles, Cameron Crovetti, Susan Heyward, Valorie Curry, and Jeffrey Dean Morgan.

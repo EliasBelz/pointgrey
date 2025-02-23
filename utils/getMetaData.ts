@@ -13,6 +13,7 @@ export type PostMetadata = {
   slug: string;
   content: string;
   featured?: boolean;
+  trailer?: string;
 };
 
 export default async function getPosts(
@@ -35,6 +36,8 @@ export default async function getPosts(
       poster: matterResult.data.poster,
       slug: filename.replace(".md", ""),
       content: matterResult.content,
+      featured: matterResult.data.featured || false,
+      trailer: matterResult.data.trailer || "",
     };
   });
   return posts;
@@ -54,6 +57,8 @@ export async function getPost(slug: string): Promise<PostMetadata | undefined> {
       poster: matterResult.data.poster,
       slug: slug,
       content: matterResult.content,
+      featured: matterResult.data.featured || false,
+      trailer: matterResult.data.trailer || "",
     };
   } catch {
     return undefined;

@@ -19,6 +19,7 @@ export default {
         out: "var(--font-outfit)",
         pet: "var(--font-petrona)",
         aleo: "var(--font-aleo)",
+        any: "var(--font-anybody)",
       },
       backgroundImage: {
         "custom-radial": "radial-gradient(circle, #420B03 0%, #000000 100%)",

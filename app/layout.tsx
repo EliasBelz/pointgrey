@@ -3,7 +3,7 @@ import "./globals.css";
 import Image from 'next/image';
 import Footer from '../components/Footer';
 import Link from "next/link";
-import {Outfit, Markazi_Text, Petrona, Aleo} from "next/font/google";
+import {Outfit, Markazi_Text, Petrona, Aleo, Manrope} from "next/font/google";
 import SplashScreen from "@/components/SplashScreen";
 
 export const metadata: Metadata = {
@@ -16,6 +16,9 @@ const pet = Petrona({weight: "500", subsets: ["latin"], variable: "--font-petron
 const aleo = Aleo({weight: "400", subsets: ["latin"], variable: "--font-aleo"})
 
 const markazi = Markazi_Text({weight:"variable", variable:"--font-markazi",display: "swap"}) // LIKE
+
+
+const anybody = Manrope({weight: "700", subsets: ["latin"], variable: "--font-anybody"})
 
 const outfit = Outfit( {
   weight: "400",
@@ -30,8 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // Made by Elias Belzberg for Point Grey Pictures
     <html lang="en">
-      <body className={`no-scroll-bar bg-background min-h-screen flex flex-col ${markazi.variable} ${outfit.variable} ${pet.variable} ${aleo.variable} ${pet.variable}`}>
+      <body className={`no-scroll-bar bg-background min-h-screen flex flex-col ${markazi.variable} ${outfit.variable} ${pet.variable} ${aleo.variable} ${pet.variable} ${anybody.variable}`}>
         <div className="flex flex-col flex-grow h-full">
           <SplashScreen>
             <div className="flex flex-col justify-center items-center w-full bg-secondary h-36 mx-auto px-10">

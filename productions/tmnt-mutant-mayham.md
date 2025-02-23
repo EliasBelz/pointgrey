@@ -7,8 +7,6 @@ logo: "/tmnt-mutant-mayham-logo.png"
 poster: "/tmnt-mutant-mayham-poster.jpg"
 ---
 
-# Teenage Mutant Ninja Turtles: Mutant Mayhem
-
 ## Description
 Techno Cosmic Research Institute (TCRI) executive Cynthia Utrom sends a squad to hunt down rogue scientist Baxter Stockman, who has created a mutagenic ooze with which he intends to form his own mutant animal family, starting with a housefly. Baxter is interrupted by Cynthia's strike force and killed in the resulting explosion, while the mutagen falls into the sewers of New York City. The mutagen turns four turtle brothers—Michelangelo, Leonardo, Raphael and Donatello—and a rat named Splinter into humanoid mutants, whereupon Splinter adopts the turtles. Splinter distrusts humanity—particularly after one encounter where he and the turtles were chased away—and trains his sons in the art of ninjutsu, instructing them to only leave their sewer home to steal supplies. Over the years, the Turtles long to live with and like humans their age, much to Splinter's dismay.
 

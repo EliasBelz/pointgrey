@@ -10,6 +10,7 @@ type CardContainerProps = {
 
 const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
   const [filter, setFilter] = useState<'all' | 'film' | 'tv'>('all');
+  const [inView, setInView] = useState(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -36,14 +37,18 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
                 });
               }
             });
+            setInView(true);
             observer.unobserve(entry.target);
+          } else {
+            setInView(false);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     );
 
     if (containerRef.current) {
+      setInView(true);
       observer.observe(containerRef.current);
     }
 
@@ -51,6 +56,9 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
       observer.disconnect();
     };
   }, [filteredProductions]);
+
+
+
 
   return (
     <div ref={containerRef} className="p-2 pt-0 pb-4 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
@@ -74,7 +82,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
           TV
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+      <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ${inView ? '' : 'invisible'}`}>
         {filteredProductions.map((production, i) => (
           <div
             key={production.slug}

@@ -10,7 +10,7 @@ type SplashScreenProps = {
 
 const SplashScreen: React.FC<SplashScreenProps> =  ({ children }) => {
 
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const path = usePathname().split("/");
   const pathname = path[path.length - 1];
   let prevPathname = pathname;
@@ -32,7 +32,7 @@ const SplashScreen: React.FC<SplashScreenProps> =  ({ children }) => {
 
     if (visible) {
       const timeline = anime.timeline({
-        easing: 'easeOutQuad',
+        easing: 'linear',
         duration: 750,
       });
       timeline
@@ -45,30 +45,26 @@ const SplashScreen: React.FC<SplashScreenProps> =  ({ children }) => {
           scale: [1, 1.1],
         })
         .add({
-          targets: 'div.splish',
-          opacity: [1, 0],
+          targets: 'article.ziggle',
+          opacity: [1, 0.1],
+
+        })
+        .add({
+          targets: 'article.ziggle',
+          opacity: [0.1, 0],
         });
-    } else {
-      anime({
-        targets: 'div.splish',
-        opacity: [0, 1],
-        duration: 1000,
-      });
     }
-    // return () => clearTimeout(timer);
   }, [visible]);
 
 
   return (
     <div key={pathname} className="flex flex-col flex-grow h-full">
-      {visible ? (
-        <div className="fixed inset-0 flex items-center justify-center bg-custom-radial z-50 splish">
+      <article className={`px-10 fixed inset-0 flex items-center justify-center bg-custom-radial z-50 ziggle ${visible ? '' : 'hidden'}`}>
          <div className="splash-img">
             <SplashImage slug={pathname}/>
          </div>
-       </div>
-      ):
-      children}
+      </article>
+      {!visible && children}
     </div>
   );
 };
