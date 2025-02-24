@@ -10,7 +10,7 @@ type SplashScreenProps = {
 
 const SplashScreen: React.FC<SplashScreenProps> =  ({ children }) => {
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const path = usePathname().split("/");
   const pathname = path[path.length - 1];
   let prevPathname = pathname;

@@ -1,13 +1,13 @@
 #md h1 {
-  @apply mx-auto pt-2 pb-4 w-full text-3xl text-center font-bold
+  @apply mx-auto pt-2 pb-4 w-full text-[1.75em] text-center font-bold
 }
 
 #md h2 {
-  @apply mx-auto pt-2 w-full text-2xl font-bold
+  @apply mx-auto pt-2 w-full text-[1.65em] font-semibold py-2
 }
 
 #md p {
-  @apply mx-auto pt-2 w-full text-xl
+  @apply mx-auto pt-2 w-full text-[1em] md:text-xl lg:text-xl mb-5;
 }
 
 iframe {

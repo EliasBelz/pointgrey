@@ -13,22 +13,39 @@ const NewComponent: React.FC<{ params: { slug: string } }> = async ({
   const pc = (await getPost(slug)) as PostMetadata;
   const releaseDate = new Date(pc.release);
   const content = pc.content;
-  return (
-    <section id="md" className=" bg-orange-100">
+  const trailer = pc.trailer;
+  console.log(pc);
 
-      {
-        <div className="flex flex-col flex-wrap">
-          <div className="h-fit mx-4 flex content-center justify-center my-4 p-4">
-            <img src={pc.logo || pc.poster} alt={`${pc.title} logo`} className="h-56 max-h-max"/>
-          </div>
-          <p className="text-center p-2 text-lg font-semibold">
-            {releaseDate.toLocaleDateString()}
-          </p>
+  const videoIframe = trailer? <iframe className="border-4 border-[#c45803] p-2 aspect-video max-w-2xl" src={trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : undefined
+
+  return (
+    <section id="md" className="h-full bg-orange-100 mb-10">
+      <div className="flex flex-col flex-wrap max-w-full">
+        <div className="h-fit mx-4 flex content-center justify-center m-4 pt-4 max-w-full ">
+          <img src={pc.logo || pc.poster} alt={`${pc.title} logo`} className="px-1 max-w-full"/>
+        </div>
+        <p className="text-center text-lg font-semibold">
+          {releaseDate.toLocaleDateString()}
+        </p>
+        <div className="pt-2 pb-4">
+
           <Divider />
         </div>
-      }
-      <div className="w-full p-10 text-lg">
-        <Markdown>{content}</Markdown>
+        {videoIframe &&
+            <div className="flex justify-center p-2 px-2 w-full">
+              <div className="border-4 border-[#BF1847] p-2 h-full aspect-video ">
+                {videoIframe}
+              </div>
+          </div>
+          }
+
+      </div>
+      <div className="w-full pt-10 px-8 md:px-16 lg:px-[15%] text-lg">
+        <h1 className="underline">
+          {pc.title}
+        </h1>
+
+        <Markdown className="pt-10">{content}</Markdown>
       </div>
     </section>
   );

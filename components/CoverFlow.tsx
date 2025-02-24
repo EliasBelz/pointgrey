@@ -1,13 +1,12 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { FreeMode, Autoplay, EffectCoverflow, Navigation } from 'swiper/modules';
-
+import { useState } from 'react';
 
 export type CoverFlowProps = {
   slides: React.ReactNode[];
@@ -15,26 +14,43 @@ export type CoverFlowProps = {
 };
 
 const CoverFlow: React.FC<CoverFlowProps> = ({ slides, onSlideChange }) => {
+  const [playing, setPlaying] = useState(true);
+
   return (
     <div>
       <Swiper
-        coverflowEffect={{
-          slideShadows: false,
-          rotate: 35,
-          stretch: 25,
-          depth: 10,
-          scale: 0.9,
+        breakpoints={{
+          0: {
+            // For mobile devices, keep 3 slides but remove rotation
+            slidesPerView: 3,
+            coverflowEffect: {
+              slideShadows: false,
+              rotate: 0,
+              stretch: 0,
+              depth: 10,
+              scale: 0.9,
+            },
+          },
+          640: {
+            slidesPerView: 3,
+            coverflowEffect: {
+              slideShadows: false,
+              rotate: 35,
+              stretch: 0,
+              depth: 10,
+              scale: 0.9,
+            },
+          },
         }}
         centeredSlides={true}
-        spaceBetween={1}
+        spaceBetween={-22}
         centeredSlidesBounds={true}
-        slidesPerView={3}
         effect="coverflow"
         navigation = {{nextEl: '.video-next', prevEl: '.video-prev'}}
         modules={[FreeMode, Autoplay, EffectCoverflow, Navigation]}
         loop={true}
         normalizeSlideIndex={true}
-        autoplay={{ delay: 5000, disableOnInteraction: true, pauseOnMouseEnter: true }}
+        autoplay={playing ? { delay: 5000, disableOnInteraction: true, pauseOnMouseEnter: true } : false}
         onRealIndexChange={(swiper) => {
           onSlideChange(swiper.realIndex);
         }}
@@ -47,21 +63,21 @@ const CoverFlow: React.FC<CoverFlowProps> = ({ slides, onSlideChange }) => {
             </SwiperSlide>
           ))}
       </Swiper>
-      <div className='w-full flex justify-center gap-2 pt-5 text-black'>
+      <div className="w-full flex justify-center gap-2 pt-3 text-black">
         <button
           className="video-prev p-1 pr-4 rounded-md hover:scale-110 hover:text-secondary"
+          onClick={() => setPlaying(false)}
         >
-          <GrPrevious size={34} />
+          <GrPrevious size={30} />
         </button>
-
         <button
           className="video-next p-1 pl-4 rounded-md hover:scale-110 hover:text-secondary"
+          onClick={() => setPlaying(false)}
         >
-          <GrNext size={34} />
+          <GrNext size={30} />
         </button>
       </div>
     </div>
-
   );
 };
 

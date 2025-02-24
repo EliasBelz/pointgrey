@@ -42,8 +42,8 @@ const SplashImage: React.FC<SplashImageProps> = ({ slug }) => {
       src={post?.logo || '/pg.svg'}
       id='splash-img'
       alt='Point Grey Pictures logo'
-      width={450}
-      height={450}
+      width={600}
+      height={600}
       priority
     />
   );

@@ -21,7 +21,7 @@ const features = [
   },
   {
     trailer: 'https://www.youtube.com/embed/W7vP89A5VWo?si=coLrUuX30DN5b9G',
-    description:'The Studio premiere on Apple TV+ on March 26, 2025. Watch the trailer now!'
+    description:'Follows a legacy Hollywood movie studio striving to survive in a world where it is increasingly difficult for art and business to live together.\n\nThe Studio premiere on Apple TV+ on March 26, 2025. Watch the trailer now!'
   },
   {
     trailer: 'https://www.youtube.com/embed/JrmC2uJXsMM?si=fH9KqqJq59hDoS3e',
@@ -42,7 +42,7 @@ const Featured: React.FC = () => {
   };
 
   const videos = features.map((feature, index) => (
-    <div className="w-full max-w-2xl min-w-56 mx-auto aspect-video relative" key={`feature-${index}`}>
+    <div className="w-full max-w-2xl min-w-72 mx-auto aspect-video relative" key={`feature-${index}`}>
     <iframe
       src={feature.trailer}
       title="YouTube video player"
@@ -55,11 +55,13 @@ const Featured: React.FC = () => {
 
   return (
     <div className='max-w-full mx-auto'>
-      <div className='max-w-full mx-auto px-4 md:px-[10%] lg:px-[10%]'>
+      <div className='max-w-full mx-auto px-4 lg:px-[10%]'>
         <CoverFlow slides={videos} onSlideChange={handleSlideChange}></CoverFlow>
       </div>
-      <div className='py-10 w-full px-[20%] min-h-36'>
-        <p className='w-full '>{features[featureIndex].description}</p>
+      <div className='py-4 md:py-6 lg:py-10 w-full px-8 md:px-16 lg:px-[15%] min-h-36'>
+        <p className="w-full text-md md:tex-lg lg:text-lg whitespace-pre-wrap text-center">
+          {features[featureIndex].description}
+        </p>
       </div>
     </div>
   );
