@@ -6,6 +6,7 @@ import Link from "next/link";
 import {Outfit, Markazi_Text, Petrona, Aleo, Manrope} from "next/font/google";
 import SplashScreen from "@/components/SplashScreen";
 import ScrollToTop from "@/components/ScrollToTop";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Point Grey Pictures",
@@ -49,6 +50,7 @@ export default function RootLayout({
             </div>
             <div className="flex-grow bg-orange-100">
               {children}
+              <SpeedInsights />
             </div>
             <Footer />
           </SplashScreen>

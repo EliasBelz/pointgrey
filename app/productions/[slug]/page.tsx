@@ -5,12 +5,10 @@ import "../../productions.css";
 import { getPost, PostMetadata } from "@/utils/getMetaData";
 import Divider from "@/components/Divider";
 
-interface PageProps {
-  params: { slug: string };
-}
-
-export default async function Page({ params }: PageProps) {
-  const { slug } = await params;
+type Params = Promise<{ slug: string }>;
+export default async function Page(props: { params: Params }) {
+  const params = await props.params;
+  const slug = params.slug;
   const pc = (await getPost(slug)) as PostMetadata;
   const releaseDate = new Date(pc.release);
   const content = pc.content;
