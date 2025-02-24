@@ -4,10 +4,7 @@ import "../../productions.css";
 import { getPost, PostMetadata } from "@/utils/getMetaData";
 import Divider from "@/components/Divider";
 
-
-const NewComponent: React.FC<{ params: { slug: string } }> = async ({
-  params,
-}) => {
+export default async function Page({ params }: { params: { slug: string }}) {
   const { slug } = await params;
   console.log(slug);
   const pc = (await getPost(slug)) as PostMetadata;
@@ -50,5 +47,3 @@ const NewComponent: React.FC<{ params: { slug: string } }> = async ({
     </section>
   );
 };
-
-export default NewComponent;
