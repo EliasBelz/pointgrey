@@ -86,7 +86,9 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
         {filteredProductions.map((production, i) => (
           <div
             key={production.slug}
-            ref={(el) => (cardRefs.current[i] = el)}
+            ref={el => {
+              cardRefs.current[i] = el;
+            }}
           >
             <Card {...production} />
           </div>

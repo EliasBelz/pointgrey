@@ -3,15 +3,18 @@ import React from "react";
 import "../../productions.css";
 import { getPost, PostMetadata } from "@/utils/getMetaData";
 import Divider from "@/components/Divider";
+import Image from "next/image";
 
-export default async function Page({ params }: { params: { slug: string }}) {
-  const { slug } = await params;
-  console.log(slug);
+type Params = Promise<{ slug: string }>;
+export default async function Page(props: { params: Params }) {
+  const params = await props.params;
+  const slug = params.slug;
+  console.log('params', params);
+  console.log('slug', slug);
   const pc = (await getPost(slug)) as PostMetadata;
   const releaseDate = new Date(pc.release);
   const content = pc.content;
   const trailer = pc.trailer;
-  console.log(pc);
 
   const videoIframe = trailer? <iframe className="border-4 border-[#c45803] p-2 aspect-video max-w-2xl" src={trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : undefined
 
@@ -19,7 +22,13 @@ export default async function Page({ params }: { params: { slug: string }}) {
     <section id="md" className="h-full bg-orange-100 mb-10">
       <div className="flex flex-col flex-wrap max-w-full">
         <div className="h-fit mx-4 flex content-center justify-center m-4 pt-4 max-w-full ">
-          <img src={pc.logo || pc.poster} alt={`${pc.title} logo`} className="px-1 max-w-full"/>
+          <Image
+            src={pc.logo || pc.poster}
+            alt={`${pc.title} logo`}
+            className="px-1 max-w-full"
+            width={400}
+            height={300}
+          />
         </div>
         <p className="text-center text-lg font-semibold">
           {releaseDate.toLocaleDateString()}
