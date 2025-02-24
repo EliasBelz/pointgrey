@@ -15,8 +15,11 @@ const Footer: React.FC = () => {
           href="https://reelstart.org">reelstart.org
         </a>
       </div>
-      <p className='py-2'>
-        © Point Grey Pictures 2024
+      <p className='pt-2 text-center'>
+       Made by Elias Belzberg for Point Grey Pictures
+      </p>
+      <p className='text-center pb-2'>
+       2025
       </p>
       <div className="w-full flex justify-center items-center space-x-6">
         <a href="https://www.instagram.com/pointgrey/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-100 w-8 h-8 flex justify-center items-center visited:text-orange-100">
