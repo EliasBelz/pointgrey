@@ -1,5 +1,6 @@
 "use server";
 import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 
 export type PostMetadata = {
@@ -19,12 +20,13 @@ export type PostMetadata = {
 export default async function getPosts(
   basePath: string
 ): Promise<PostMetadata[]> {
-  const folder = basePath + "/";
+  const folder = path.join(process.cwd(), basePath);
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
   const posts = markdownPosts.map((filename) => {
-    const fileContents = fs.readFileSync(`${basePath}/${filename}`, "utf8");
+    const filePath = path.join(folder, filename);
+    const fileContents = fs.readFileSync(filePath, "utf8");
     const matterResult = matter(fileContents);
     return {
       title: matterResult.data.title,
@@ -45,7 +47,8 @@ export default async function getPosts(
 
 export async function getPost(slug: string): Promise<PostMetadata | undefined> {
   try {
-    const content = await fs.readFileSync(`productions/${slug}.md`, "utf8");
+    const filePath = path.join(process.cwd(), "productions", `${slug}.md`);
+    const content = fs.readFileSync(filePath, "utf8");
     const matterResult = matter(content);
     return {
       title: matterResult.data.title,
