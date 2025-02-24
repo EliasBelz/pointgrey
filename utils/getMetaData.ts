@@ -60,7 +60,20 @@ export async function getPost(slug: string): Promise<PostMetadata | undefined> {
       featured: matterResult.data.featured || false,
       trailer: matterResult.data.trailer || "",
     };
-  } catch {
-    return undefined;
+  } catch (e) {
+    console.error(e);
+    return {
+      title: "404",
+      type: "404",
+      bio: "404",
+      stream: "404",
+      release: new Date(),
+      logo: "404",
+      poster: "404",
+      slug: "404",
+      content: "404",
+      featured: false,
+      trailer: "404",
+    };
   }
 }

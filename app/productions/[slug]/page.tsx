@@ -1,3 +1,4 @@
+"use server";
 import Markdown from "markdown-to-jsx";
 import React from "react";
 import "../../productions.css";
