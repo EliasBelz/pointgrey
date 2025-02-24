@@ -12,6 +12,7 @@ export default async function Page(props: { params: Params }) {
   console.log('params', params);
   console.log('slug', slug);
   const pc = (await getPost(slug)) as PostMetadata;
+  console.log('pc', pc);
   const releaseDate = new Date(pc.release);
   const content = pc.content;
   const trailer = pc.trailer;
