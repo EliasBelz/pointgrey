@@ -24,6 +24,7 @@ export default async function Page(props: { params: Params }) {
       allowFullScreen
     ></iframe>
   ) : undefined;
+  console.log('CLICK', slug);
 
   return (
     <section id="md" className="h-full bg-orange-100 mb-10">
