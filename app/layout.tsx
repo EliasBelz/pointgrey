@@ -16,17 +16,15 @@ const pet = Petrona({weight: "500", subsets: ["latin"], variable: "--font-petron
 
 const aleo = Aleo({weight: "400", subsets: ["latin"], variable: "--font-aleo"})
 
-const markazi = Markazi_Text({weight:"variable", variable:"--font-markazi",display: "swap"}) // LIKE
-
+const markazi = Markazi_Text({weight:"variable", subsets: ["latin"], variable:"--font-markazi", display: "swap"}) // LIKE
 
 const anybody = Manrope({weight: "700", subsets: ["latin"], variable: "--font-anybody"})
 
-const outfit = Outfit( {
+const outfit = Outfit({
   weight: "400",
+  subsets: ["latin"],
   variable: "--font-outfit",
-}
-
-);
+});
 
 export default function RootLayout({
   children,
