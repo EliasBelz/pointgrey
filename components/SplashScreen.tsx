@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import anime from 'animejs';
 import { usePathname } from 'next/navigation';
 import SplashImage from './SplashImage';
@@ -13,14 +13,14 @@ const SplashScreen: React.FC<SplashScreenProps> =  ({ children }) => {
   const [visible, setVisible] = useState(true);
   const path = usePathname().split("/");
   const pathname = path[path.length - 1];
-  const prevPathnameRef = useRef(pathname);
+  let prevPathname = pathname;
 
 
   useEffect(() => {
-    if ("" === prevPathnameRef.current) return;
+    if ("" === prevPathname) return;
 
     setVisible(true);
-    prevPathnameRef.current = pathname;
+    prevPathname = pathname;
 
   }, [pathname]);
 
