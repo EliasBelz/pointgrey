@@ -21,7 +21,7 @@ const features = [
   },
   {
     trailer: 'https://www.youtube.com/embed/W7vP89A5VWo?si=coLrUuX30DN5b9G',
-    description:'Follows a legacy Hollywood movie studio striving to survive in a world where it is increasingly difficult for art and business to live together.\n\nThe Studio premiere on Apple TV+ on March 26, 2025. Watch the trailer now!'
+    description:'Follow a legacy Hollywood movie studio striving to survive in a world where it is increasingly difficult for art and business to live together.\n\nThe Studio premiere on Apple TV+ on March 26, 2025. Watch the trailer now!'
   },
   {
     trailer: 'https://www.youtube.com/embed/JrmC2uJXsMM?si=fH9KqqJq59hDoS3e',
@@ -42,23 +42,23 @@ const Featured: React.FC = () => {
   };
 
   const videos = features.map((feature, index) => (
-    <div className="w-full max-w-2xl min-w-72 mx-auto aspect-video relative" key={`feature-${index}`}>
-    <iframe
-      src={feature.trailer}
-      title="YouTube video player"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      className="absolute top-0 left-0 w-full h-full"
-    ></iframe>
-  </div>
+    <div className="w-full max-w-3xl min-w-72 mx-auto aspect-video relative" key={`feature-${index}`}>
+      <iframe
+        src={feature.trailer}
+        title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="absolute top-0 left-0 w-full h-full"
+      ></iframe>
+    </div>
   ));
 
   return (
     <div className='max-w-full mx-auto'>
-      <div className='max-w-full mx-auto px-4 lg:px-[10%]'>
+      <div className='max-w-full h-full mx-auto px-4 lg:px-[10%]'>
         <CoverFlow slides={videos} onSlideChange={handleSlideChange}></CoverFlow>
       </div>
-      <div className='py-4 md:py-6 lg:py-10 w-full px-8 md:px-16 lg:px-[15%] min-h-36'>
+      <div className='py-4 md:py-6 lg:py-10 w-full px-8 md:px-16 lg:px-[15%] min-h-44'>
         <p className="w-full text-md md:tex-lg lg:text-lg whitespace-pre-wrap text-center">
           {features[featureIndex].description}
         </p>

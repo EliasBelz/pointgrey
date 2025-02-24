@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     // Made by Elias Belzberg for Point Grey Pictures
     <html lang="en">
-      <body className={`no-scroll-bar bg-background min-h-screen flex flex-col ${markazi.variable} ${outfit.variable} ${pet.variable} ${aleo.variable} ${pet.variable} ${anybody.variable}`}>
+      <body className={`no-scroll-bar bg-secondary min-h-screen flex flex-col ${markazi.variable} ${outfit.variable} ${pet.variable} ${aleo.variable} ${pet.variable} ${anybody.variable}`}>
         <div className="flex flex-col flex-grow h-full">
           <SplashScreen>
             <div className="flex flex-col justify-center items-center w-full bg-secondary h-36 mx-auto px-10">

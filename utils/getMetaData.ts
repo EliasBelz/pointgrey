@@ -76,7 +76,6 @@ export async function getPost(slug: string): Promise<PostMetadata | undefined> {
       slug: "404",
       content: "404",
       featured: false,
-      trailer: "404",
     };
   }
 }
