@@ -48,7 +48,7 @@ export default function RootLayout({
                 />
               </Link>
             </div>
-            <div className="flex-grow bg-orange-100">
+            <div className="flex-grow bg-orange-100 pb-10">
               {children}
               <SpeedInsights />
             </div>

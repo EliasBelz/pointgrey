@@ -42,20 +42,20 @@ const Featured: React.FC = () => {
   };
 
   const videos = features.map((feature, index) => (
-    <div className="w-full max-w-3xl min-w-72 mx-auto aspect-video relative" key={`feature-${index}`}>
-      <iframe
-        src={feature.trailer}
-        title="YouTube video player"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="absolute top-0 left-0 w-full h-full"
-      ></iframe>
-    </div>
+    <div className="w-full max-w-[75vw] min-w-72 mx-auto flex-grow-1 relative  aspect-video" key={`feature-${index}`}>
+    <iframe
+      src={feature.trailer}
+      title="YouTube video player"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      className="absolute top-0 left-0 w-full h-full"
+    ></iframe>
+  </div>
   ));
 
   return (
     <div className='max-w-full mx-auto'>
-      <div className='max-w-full h-full mx-auto px-4 lg:px-[10%]'>
+      <div className='max-w-[2000px] h-full mx-auto px-4 lg:px-[5%]'>
         <CoverFlow slides={videos} onSlideChange={handleSlideChange}></CoverFlow>
       </div>
       <div className='py-4 md:py-6 lg:py-10 w-full px-8 md:px-16 lg:px-[15%] min-h-44'>
