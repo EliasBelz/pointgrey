@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Point Grey Pictures',
     images: [
       {
-        url: '/og-logo.png',  // This should be in your public folder
+        url: '/og-logo.jpg',
         width: 1200,
         height: 630,
         alt: 'Point Grey Pictures',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Point Grey Pictures',
     description: 'Everything you want to know about Point Grey Pictures.',
-    images: ['/og-logo.png'],
+    images: ['/og-logo.jpg'],
   },
 };
 
