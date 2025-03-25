@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Point Grey Pictures',
     description: 'Everything you want to know about Point Grey Pictures.',
-    url: 'https://pointgreypictures.vercel.app',
     siteName: 'Point Grey Pictures',
     images: [
       {
