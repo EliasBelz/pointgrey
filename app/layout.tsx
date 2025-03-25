@@ -10,6 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/next';
 
 
+
 export const metadata: Metadata = {
   title: "Point Grey Pictures",
   description: "Everything you want to know about Point Grey Pictures.",
