@@ -18,10 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Point Grey Pictures',
     description: 'Everything you want to know about Point Grey Pictures.',
+    url: 'https://pointgreypictures.vercel.app',
     siteName: 'Point Grey Pictures',
     images: [
       {
-        url: '/og-logo.jpg',
+        url: 'https://github.com/EliasBelz/pointgrey/blob/aae2849e19afce16dea3eb8fdd471947a025a8cf/public/og-logo.jpg?raw=true',
         width: 1200,
         height: 630,
         alt: 'Point Grey Pictures',
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Point Grey Pictures',
     description: 'Everything you want to know about Point Grey Pictures.',
-    images: ['/og-logo.jpg'],
+    images: ['https://github.com/EliasBelz/pointgrey/blob/aae2849e19afce16dea3eb8fdd471947a025a8cf/public/og-logo.jpg?raw=true'],
   },
 };
 
