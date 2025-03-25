@@ -46,7 +46,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
           }
         });
       },
-      { threshold: 0.13 }
+      { threshold: 0.09 }
     );
 
     if (containerRef.current) {
