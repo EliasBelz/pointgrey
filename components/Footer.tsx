@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-secondary text-orange-200 py-10 w-full flex flex-col justify-between items-center relative">
       <div className='w-full flex flex-col justify-start pl-10 pb-2'>
-        <p>Checkout more of what we do:</p>
+        <p>Check out more of what we do:</p>
         <ul className="list-disc pl-5">
           <li>
             <a
