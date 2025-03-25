@@ -46,7 +46,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.13 }
     );
 
     if (containerRef.current) {
@@ -97,7 +97,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
         ))}
       </div>
 
-      <div className=" pt-8 flex items-center justify-center text-gray-700 font-any font-semibold">
+      <div className=" pt-12 flex items-center justify-center text-gray-700 font-any font-semibold">
         <IoInformationCircleOutline className="mr-1 text-2xl" />
         <span className="text-base">Click a poster to learn more</span>
       </div>

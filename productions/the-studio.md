@@ -4,6 +4,7 @@ type: "tv"
 bio: "Follows a legacy Hollywood movie studio striving to survive in a world where it is increasingly difficult for art and business to live together."
 release: "2025-3-26"
 poster: "/the-studio-poster.png"
+logo: "/the-studio-logo.webp"
 featured: true
 trailer: "https://www.youtube.com/embed/W7vP89A5VWo?si=coLrUu2X30DN5b9G"
 ---

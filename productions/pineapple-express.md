@@ -1,12 +1,14 @@
 ---
 title: "Pineapple Express"
 type: "film"
-bio: "A stoner and his dealer are forced to go on the run from the police after the pothead witnesses a cop murder a guy."
 release: "2008-08-6"
 logo: "/pineapple-express-logo.png"
 poster: "/pineapple-express-poster.jpg"
+trailer: "https://www.youtube.com/embed/BWZt4v6b1hI"
 ---
 
 ## Description
 
-Stoner Dale Denton's (Seth Rogen) enjoyment of a rare strain of marijuana may prove fatal when he drops his roach in a panic after witnessing a murder. Upon learning that the fancy weed can be traced back to them, Dale and his dealer (James Franco) go on the lam, with a dangerous drug lord (Gary Cole) and crooked cop (Rosie Perez) hot on their heels.
+In *Pineapple Express*, Dale Denton, a process server and marijuana enthusiast, accidentally witnesses a murder by drug lord Ted Jones and corrupt officer Carol Brazier. After throwing away a joint containing the rare "Pineapple Express" strain, Dale and his dealer, Saul Silver, become the targets of Jones' hitmen.
+
+Fleeing for their lives, Dale and Saul end up on a wild journey, evading capture through car chases, high-speed escapes, and a series of misadventures. They seek help from their drug contacts, but things get worse as they navigate betrayal, shootouts, and a final showdown with Jones' gang. Amid the chaos, Dale and Saul's bond strengthens, leading to a hilarious and action-packed conclusion.
