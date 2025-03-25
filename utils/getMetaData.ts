@@ -6,7 +6,7 @@ import matter from "gray-matter";
 export type PostMetadata = {
   title: string;
   type: string;
-  bio: string;
+  bio?: string;
   stream: string;
   release: Date;
   logo?: string;

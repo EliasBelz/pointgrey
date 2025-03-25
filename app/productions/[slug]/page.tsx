@@ -30,6 +30,7 @@ export default async function Page(props: { params: Params }) {
     <section id="md" className="h-full bg-orange-100 mb-10">
       <div className="flex flex-col flex-wrap max-w-full">
         <div className="h-fit mx-4 flex content-center justify-center m-4 pt-4 max-w-full ">
+           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={pc.logo || pc.poster}
             alt={`${pc.title} logo`}

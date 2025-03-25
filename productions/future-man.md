@@ -5,9 +5,12 @@ bio: "Future Man is an American comedy television series created by Howard Overm
 release: "2017-11-14"
 logo: "/future-man-logo.png"
 poster: "/future-man-poster.jpg"
+trailer: "https://www.youtube.com/embed/7wgNIKrlYh0?si=nZi2h59sBiqhBUUW"
 ---
 
 ## Description
 
-An aimless janitor, Josh Futterman, leads a nondescript life. Josh's sole hobby is playing video games, specifically, Biotic Wars, a game considered unbeatable. After finally completing the game after many attempts the game's two main characters, Tiger and Wolf, suddenly appear and recruit Josh to save the world from the real Biotic Wars. Josh and his companions travel through time to change the future.
+Josh Futterman (Josh Hutcherson) is a janitor by day, gamer by night, and an all-around underachiever—until the impossible happens. After beating Biotic Wars, a video game deemed unbeatable, two mysterious warriors, Tiger (Eliza Coupe) and Wolf (Derek Wilson), appear from the future with shocking news: the game was actually a recruitment test, and Josh is now humanity’s last hope against an impending apocalypse. Armed with minimal skills, crude humor, and a whole lot of bad decisions, Josh embarks on a chaotic, time-traveling mission to rewrite history and save the world.
+
+Produced by Seth Rogen and Evan Goldberg, Future Man is a wild, R-rated sci-fi comedy packed with absurd action, pop culture chaos, and no-holds-barred humor. From botched time-travel attempts to bizarre alternate realities, Josh and his team fumble through history, meeting historical figures, making catastrophic mistakes, and somehow surviving it all. With hilarious performances and a gleefully irreverent take on classic sci-fi tropes, this series is a must-watch for fans of Back to the Future, The Terminator, and off-the-wall comedy.
 

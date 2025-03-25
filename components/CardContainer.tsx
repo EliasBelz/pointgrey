@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Card from './Card';
 import { PostMetadata } from '@/utils/getMetaData';
 import anime from 'animejs';
+import { IoInformationCircleOutline } from "react-icons/io5";
+
 
 type CardContainerProps = {
   list: PostMetadata[];
@@ -61,7 +63,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
 
 
   return (
-    <div ref={containerRef} className="p-2 pt-0 pb-4 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
+    <div ref={containerRef} className="p-2 py-2 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
       <div className="flex justify-center mb-4">
         <button
           className={`rounded-l-full w-14 h-10 border-black border-2 ${filter === 'film' ? 'bg-orange-200' : 'bg-orange-100'}`}
@@ -93,6 +95,11 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
             <Card {...production} />
           </div>
         ))}
+      </div>
+
+      <div className=" pt-8 flex items-center justify-center text-gray-700 font-any font-semibold">
+        <IoInformationCircleOutline className="mr-1 text-2xl" />
+        <span className="text-base">Click a poster to learn more</span>
       </div>
     </div>
   );

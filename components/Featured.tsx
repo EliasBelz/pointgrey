@@ -58,8 +58,8 @@ const Featured: React.FC = () => {
       <div className='max-w-[2000px] h-full mx-auto px-4 lg:px-[5%]'>
         <CoverFlow slides={videos} onSlideChange={handleSlideChange}></CoverFlow>
       </div>
-      <div className='py-4 md:py-6 lg:py-10 w-full px-8 md:px-16 lg:px-[15%] min-h-44'>
-        <p className="w-full text-md md:tex-lg lg:text-lg whitespace-pre-wrap text-center">
+      <div className='py-4 md:py-6 lg:py-10 w-full px-8 md:px-16 lg:px-[15%] min-h-60'>
+        <p className="w-full text-lg whitespace-pre-wrap text-center h-full">
           {features[featureIndex].description}
         </p>
       </div>

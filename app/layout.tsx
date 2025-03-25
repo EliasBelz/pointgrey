@@ -58,9 +58,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Made by Elias Belzberg for Point Grey Pictures
     <html lang="en">
       <body className={`no-scroll-bar bg-secondary min-h-screen flex flex-col ${markazi.variable} ${outfit.variable} ${pet.variable} ${aleo.variable} ${pet.variable} ${anybody.variable}`}>
+        {/* Made by Elias Belzberg for Point Grey Pictures */}
         <div className="flex flex-col flex-grow h-full">
           <SplashScreen>
             <div className="flex flex-col justify-center items-center w-full bg-secondary h-36 mx-auto px-10">
