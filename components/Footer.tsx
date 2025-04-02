@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className='pl-3'>
         <p className='pt-2 text-center'>
           © 2025 Point Grey Pictures. All rights reserved.
         </p>
