@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Card: React.FC<PostMetadata> = ({ title,  release, poster, slug }) => {
   return (
     <Link href={`/productions/${slug}`}>
-      <div className="bg-orange-200 h-full w-80 p-3 lg:p-4 pb-3 lg:pb-5 rounded-sm shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl max-w-fit flex flex-col justify-between items-center text-xg font-semibold">
+      <div className="bg-orange-200 h-full w-80 p-2 rounded-sm shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl max-w-fit flex flex-col justify-between items-center text-xg font-semibold">
         <Image
           src={poster}
           alt={title}

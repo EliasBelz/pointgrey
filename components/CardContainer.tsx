@@ -63,7 +63,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
 
 
   return (
-    <div ref={containerRef} className="p-2 py-2 sm:pl-4 sm:pr-4 md:pl-20 md:pr-20 lg:pr-36 lg:pl-36 max-w-full flex flex-col items-center">
+    <div ref={containerRef} className="p-2 sm:px-4 md:px-20 lg:px-36 max-w-full flex flex-col items-center">
       <div className="flex justify-center mb-4">
         <button
           className={`rounded-l-full w-14 h-10 border-black border-2 ${filter === 'film' ? 'bg-orange-200' : 'bg-orange-100'}`}
@@ -84,7 +84,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
           TV
         </button>
       </div>
-      <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ${inView ? '' : 'invisible'}`}>
+      <div className={`grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-3 lg:gap-4  ${inView ? '' : 'invisible'}`}>
         {filteredProductions.map((production, i) => (
           <div
             key={production.slug}

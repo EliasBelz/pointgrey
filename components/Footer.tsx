@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
       </div>
       <div className='pl-3'>
         <p className='pt-2 text-center'>
-          © 2025 Point Grey Pictures. All rights reserved.
+          © 2025 Point Grey Pictures.
         </p>
         <p className='text-center pb-2'>
         2025
