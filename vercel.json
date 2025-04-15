@@ -1,3 +1,0 @@
-{
-  "ignoreCommand": "rm -rf .git .next/cache"
-}
