@@ -27,10 +27,7 @@ export default async function Home() {
           Featured
         </h2>
       </div>
-
-      <div id="featured">
-        <Featured />
-      </div>
+      <Featured />
       <h1
         id="productions"
         className="text-3xl font-bold ml-auto mr-auto w-max pb-4"
