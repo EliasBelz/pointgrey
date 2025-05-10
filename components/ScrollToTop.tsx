@@ -1,10 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useRouter, usePathname } from "next/navigation";
 
 const FloatingNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   // Show button only after scrolling
   useEffect(() => {
@@ -33,6 +37,14 @@ const FloatingNav: React.FC = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
+    // If not on home page, navigate to home page with section hash
+    if (!isHomePage) {
+      router.push(`/#${sectionId}`);
+      toggleMenu();
+      return;
+    }
+
+    // If already on home page, just scroll to the section
     if (sectionId === "top") {
       // Scroll to the very top of the page
       window.scrollTo({
