@@ -4,6 +4,7 @@ import React from "react";
 import "../../productions.css";
 import { getPost, PostMetadata } from "@/utils/getMetaData";
 import Divider from "@/components/Divider";
+import Image from "next/image";
 
 type Params = Promise<{ slug: string }>;
 export default async function Page(props: { params: Params }) {
@@ -14,7 +15,6 @@ export default async function Page(props: { params: Params }) {
   const content = pc.content;
   const trailer = pc.trailer;
 
-
   const videoIframe = trailer ? (
     <iframe
       className="border-4 border-[#c45803] p-2 aspect-video w-[90vw] max-w-[800px] mx-auto"
@@ -24,17 +24,19 @@ export default async function Page(props: { params: Params }) {
       allowFullScreen
     ></iframe>
   ) : undefined;
-  console.log('CLICK', slug);
+  console.log("CLICK", slug);
 
   return (
     <section id="md" className="h-full bg-orange-100 mb-10">
       <div className="flex flex-col flex-wrap max-w-full">
-        <div className="h-fit mx-4 flex content-center justify-center m-4 pt-4 max-w-full ">
-           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+        <div className="h-fit mx-2 sm:mx-4 flex content-center justify-center my-2 sm:m-4 pt-2 sm:pt-4 max-w-full">
+          <Image
+            width={400}
+            height={500}
             src={pc.logo || pc.poster}
             alt={`${pc.title} logo`}
-            className="px-1 max-w-[90vw] max-h-[90vw] md:max-w-[600px] md:max-h-[600px] lg:max-w-[600px]"
+            className="px-1 max-h-[70vw] sm:max-h-[80vw] md:max-h-[500px] glow-pink-blue"
+            style={{ objectFit: "contain", maxWidth: "90%" }}
           />
         </div>
         <p className="text-center text-lg font-semibold">

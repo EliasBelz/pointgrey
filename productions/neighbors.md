@@ -7,7 +7,7 @@ poster: "/neighbors-poster.jpg"
 trailer: "https://www.youtube.com/embed/KrAf5ALLxGI"
 ---
 
-## Description
+## When new parents and a rowdy frat house clash in suburbia, an all-out war of pranks proves adulthood and immaturity are just two sides of the same keg.
 
 *Neighbors* is a wild and hilarious bromantic comedy about a couple, Mac and Kelly Radner, who are struggling to adjust to the demands of parenthood. Their peaceful suburban life is turned upside down when a raucous fraternity, Delta Psi Beta, moves in next door. When their baby is kept up by the loud parties, the Radners ask the fraternity's leader, Teddy, to keep the noise down. What starts as a simple request quickly spirals into a full-blown war, as Mac and Kelly find themselves battling the frat boys with pranks, sabotage, and unexpected alliances.
 

@@ -84,7 +84,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ list }) => {
           TV
         </button>
       </div>
-      <div className={`grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-3 lg:gap-4  ${inView ? '' : 'invisible'}`}>
+      <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ${inView ? '' : 'invisible'}`}>
         {filteredProductions.map((production, i) => (
           <div
             key={production.slug}

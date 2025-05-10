@@ -7,7 +7,7 @@ poster: "/the-disaster-artist-poster.jpg"
 trailer: "https://www.youtube.com/embed/cMKX2tE5Luk"
 ---
 
-## Description
+## The bizarre true story of how the worst movie ever made turned its mysterious creator into an accidental legend and proved that Hollywood dreams come true in the strangest ways.
 
 Some movies are so bad, they're good—*The Room* is one of them. *The Disaster Artist* tells the unbelievable true story behind one of the most infamous films ever made. Aspiring actor Greg Sestero (Dave Franco) befriends the mysterious and eccentric Tommy Wiseau (James Franco), and together, they set out to make *The Room*, a movie so bizarre and misguided that it becomes a cult sensation.
 

@@ -2,14 +2,14 @@
 title: "Gen V"
 type: "tv"
 release: "2023-09-29"
-logo: "/gen-v-logo.png"
-poster: "/gen-v-poster.jpg"
+logo: "https://res.cloudinary.com/dzwvo7zsd/image/upload/v1744956047/gen-v-logo_uoedr1.png"
+poster: "https://res.cloudinary.com/dzwvo7zsd/image/upload/v1744956047/gen-v-poster_zwkgex.jpg"
 trailer: "https://www.youtube.com/embed/mmkLMXN_lpI"
 ---
 
-## Description
+## At this elite superhero college, the assignments are deadly, the parties are bloody, and the path to graduation is paved with corporate conspiracy and uncontrollable powers.
 
-Gen V plunges viewers into the high-stakes world of Godolkin University, the elite training ground for young adult superheroes striving for greatness. Set within The Boys universe, this Amazon Prime series, which premiered on September 29, 2023, follows a group of ambitious and morally conflicted Supes as they navigate ruthless competitions, hidden conspiracies, and their own personal struggles. With a chance to join Vought International’s elite superhero team, The Seven, hanging in the balance, these students push their physical, mental, and ethical limits in ways they never imagined.
+Gen V plunges viewers into the high-stakes world of Godolkin University, the elite training ground for young adult superheroes striving for greatness. Set within The Boys universe, this Amazon Prime series, which premiered on September 29, 2023, follows a group of ambitious and morally conflicted Supes as they navigate ruthless competitions, hidden conspiracies, and their own personal struggles. With a chance to join Vought International's elite superhero team, The Seven, hanging in the balance, these students push their physical, mental, and ethical limits in ways they never imagined.
 
 Developed by Craig Rosenberg, Evan Goldberg, and Eric Kripke, Gen V expands The Boys franchise with a fresh perspective, diving deep into the dark underbelly of superhero culture. Loosely based on the We Gotta Go Now story arc from The Boys comics by Garth Ennis and Darick Robertson, the show boasts a stellar cast, including Jaz Sinclair, Chance Perdomo, Lizze Broadway, Maddie Phillips, London Thor, Derek Luh, Asa Germann, and Shelley Conn. Each actor delivers compelling performances, bringing depth and complexity to their characters as they grapple with the price of power and the temptations of fame.
 

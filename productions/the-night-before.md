@@ -7,7 +7,7 @@ poster: "/the-night-before-poster.jpg"
 trailer: "https://www.youtube.com/embed/kOBdxkhJvHQ"
 ---
 
-## Description
+## Three bros on their final Christmas Eve tradition hunt down a mythical holiday party through a sleigh-full of drugs, celebrity cameos, and quarter-life crises.
 
 For over a decade, best friends Ethan, Isaac, and Chris have spent every Christmas Eve together in search of the ultimate holiday party—the legendary Nutcracker Ball. But with adulthood creeping in—Isaac about to become a father, Chris focused on his rising fame, and Ethan struggling to move forward—the trio decides this will be their last wild night together. Armed with a secret invitation to the elusive event, they set out on a chaotic, drug-fueled, and unexpectedly heartfelt adventure through New York City.
 
