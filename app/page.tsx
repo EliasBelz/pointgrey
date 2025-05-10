@@ -8,7 +8,7 @@ import AboutCard from "@/components/AboutCard";
 export default async function Home() {
   const productions = await getPosts("productions");
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id="top" className="flex flex-col items-center justify-center">
       <h1 className="pt-24 text-4xl font-bolds w-full mx-auto text-center">
         Point Grey Pictures
       </h1>
@@ -28,8 +28,13 @@ export default async function Home() {
         </h2>
       </div>
 
-      <Featured />
-      <h1 className="text-3xl font-bold ml-auto mr-auto w-max pb-4">
+      <div id="featured">
+        <Featured />
+      </div>
+      <h1
+        id="productions"
+        className="text-3xl font-bold ml-auto mr-auto w-max pb-4"
+      >
         Productions
       </h1>
       <CardContainer list={productions} />
